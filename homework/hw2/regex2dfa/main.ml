@@ -1,5 +1,4 @@
 open Regex
-open Hw1
 
 let testcases : (Regex.t * alphabet list) list = 
   [ 
@@ -20,7 +19,7 @@ let testcases : (Regex.t * alphabet list) list =
   ]
 
 let match_regex : Regex.t -> alphabet list -> bool
-=fun regex input -> Hw1.run_dfa (Hw1.regex2dfa regex) input
+=fun regex input -> Trans.run_dfa (Trans.regex2dfa regex) input
 
 (* run testcases *)
 let _ = 
