@@ -1,0 +1,8 @@
+(lang dune 2.9)
+(name regex2dfa)
+
+(package
+  (name regex2dfa)
+  (depends
+    (dune :build)
+    (core :build)))

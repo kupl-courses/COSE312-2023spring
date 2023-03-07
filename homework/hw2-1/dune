@@ -1,0 +1,11 @@
+(executable 
+  (name main)
+  (public_name regex2dfa)
+  (libraries 
+    base 
+    stdio 
+    core 
+    batteries
+  )
+  (package regex2dfa)
+)
