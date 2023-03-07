@@ -1,0 +1,11 @@
+(executable 
+  (name main)
+  (public_name tdparse)
+  (libraries 
+    base 
+    stdio 
+    core 
+    batteries
+  )
+  (package tdparse)
+)

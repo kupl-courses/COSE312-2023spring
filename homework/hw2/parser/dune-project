@@ -1,0 +1,8 @@
+(lang dune 2.9)
+(name tdparse)
+
+(package
+  (name tdparse)
+  (depends
+    (dune :build)
+    (core :build)))
