@@ -18,5 +18,5 @@ sudo apt install python3.10 -y
 ```
 cd develop
 cd hw2/regex2dfa
-build dune main.exe
+dune build main.exe
 ```
