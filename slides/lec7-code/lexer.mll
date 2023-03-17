@@ -13,6 +13,6 @@ rule token = parse
   | '+' { PLUS }
   | '-' { MINUS }
   | '*' { MULTIPLY }
-  | '(' { LPARAN }
+  | '(' { LPAREN }
   | ')' { RPAREN }
   | _ { raise LexicalError }
