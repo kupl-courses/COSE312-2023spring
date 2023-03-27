@@ -1,0 +1,10 @@
+{
+    "image": "sambyeol/ocaml-devcontainer",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ocamllabs.ocaml-platform"
+            ]
+        }
+    }
+}
