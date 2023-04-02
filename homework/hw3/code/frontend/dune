@@ -1,0 +1,11 @@
+(library
+  (name frontend)
+  (public_name pycompiler.frontend)
+  (libraries
+    base 
+    stdio 
+    core 
+    yojson 
+    batteries    
+    pycompiler.lib
+  ))

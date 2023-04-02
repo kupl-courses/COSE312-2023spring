@@ -1,0 +1,12 @@
+(lang dune 2.9)
+(name pycompiler)
+
+(package
+  (name pycompiler)
+  (depends
+    (pycompiler.lib :build)
+    (pycompiler.frontend :build)
+    (pycompiler.analysis :build)
+    (dune :build)
+    (core :build)
+    (z3 :build)))
