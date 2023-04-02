@@ -1,5 +1,7 @@
+
 {
-    "image": "sambyeol/ocaml-devcontainer",
+    "name": "cose312-2023spring",
+    "image": "ghcr.io/sambyeol/ocaml-devcontainer",
     "customizations": {
         "vscode": {
             "extensions": [
