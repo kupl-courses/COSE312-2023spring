@@ -11,7 +11,7 @@ CORES=2
 # Setup Dependencies
 echo "[NOTE] Start Setup System Dependencies"
 sudo apt-get update >/dev/null
-for pkg in "cmake" "build-essential" "python2.7" "libgmp-dev" "opam" "ocaml-findlib" "python3" "python3-pip"; do
+for pkg in "cmake" "build-essential" "python2.7" "libgmp-dev" "opam" "ocaml-findlib" "python3" "python3-pip" "graphvis"; do
   sudo apt-get install -y -qq $pkg >/dev/null 2>&1
   echo "[NOTE] $pkg: Installed"
 done
