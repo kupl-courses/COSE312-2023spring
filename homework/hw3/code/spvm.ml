@@ -550,7 +550,7 @@ let move : state -> state option
           }
       | _ -> raise (TypeError "ITER_STORE")
     end
-  | ITER_LENGTH (x, l) when typeof l state = TY_STR-> 
+  | ITER_LENGTH (x, l) when typeof l state = TY_STR -> 
     let loc_x, state = lookup_with_alloc x state in 
     begin 
       match eval_var l state with 
@@ -561,6 +561,17 @@ let move : state -> state option
         }
       | _ -> raise (TypeError "LENGTH: not a string")
     end 
+  | ITER_LENGTH (x, l) when typeof l state = TY_TUPLE -> 
+    let loc_x, state = lookup_with_alloc x state in 
+    begin 
+      match eval_var l state with 
+      | TUPLE lst ->
+        Some {state with 
+          pc = get_next_pc state;
+          memory = Memory.bind loc_x (NUM (List.length lst)) state.memory 
+        }
+      | _ -> raise (TypeError "LENGTH: not a list")
+    end
   | ITER_LENGTH (x, l) when typeof l state = TY_REF -> 
       let loc_x, state = lookup_with_alloc x state in 
       begin 
