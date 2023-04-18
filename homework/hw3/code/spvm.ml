@@ -570,7 +570,7 @@ let move : state -> state option
           pc = get_next_pc state;
           memory = Memory.bind loc_x (NUM (List.length lst)) state.memory 
         }
-      | _ -> raise (TypeError "LENGTH: not a list")
+      | _ -> raise (TypeError "LENGTH: not a tuple")
     end
   | ITER_LENGTH (x, l) when typeof l state = TY_REF -> 
       let loc_x, state = lookup_with_alloc x state in 
