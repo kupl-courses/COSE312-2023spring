@@ -1,0 +1,15 @@
+(executable 
+  (name main)
+  (public_name pycompiler)
+  (libraries 
+    pycompiler.lib 
+    pycompiler.frontend
+    base 
+    stdio 
+    core 
+    yojson 
+    batteries
+    z3
+  )
+  (package pycompiler)
+)

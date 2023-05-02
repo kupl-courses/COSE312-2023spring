@@ -1,0 +1,4 @@
+(library
+  (name lib)
+  (public_name pycompiler.lib)
+  (libraries base stdio core batteries z3))
