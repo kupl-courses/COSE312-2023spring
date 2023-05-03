@@ -184,7 +184,7 @@ and translate_expr : Spy.expr -> Spvm.id * Spvm.linstr list
     let func_def = FunctionDef (func_var, args, [Return (Some body)]) in 
     let code = translate_stmts ctx0 [func_def; Assign ([Name t], Name func_var)] in 
       (t, code)
-  | IfExp _ ./r(* TODO *)  
+  (*| IfExp _ .*) 
   | _ -> raise (Not_Implemented ("translate_expr"))
 
 and translate_bop op = 
